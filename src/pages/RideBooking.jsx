@@ -12,42 +12,33 @@ const RideBooking = () => {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div>
       <h1>Book a Ride</h1>
-      <div style={{ marginBottom: "20px" }}>
+      <div>
         <input
           type="text"
           placeholder="Pickup location"
           value={pickup}
           onChange={(e) => setPickup(e.target.value)}
-          style={{ marginRight: "10px", padding: "8px" }}
         />
         <input
           type="text"
           placeholder="Destination"
           value={destination}
           onChange={(e) => setDestination(e.target.value)}
-          style={{ padding: "8px" }}
         />
-        <button
-          onClick={handleBookRide}
-          style={{ marginLeft: "10px", padding: "8px 16px" }}
-        >
-          Book Ride
-        </button>
+        <button onClick={handleBookRide}>Book Ride</button>
       </div>
 
       {rideConfirmed && <p>Ride Confirmed!</p>}
 
       {/* Navigation Buttons */}
-      <div style={{ marginTop: "20px" }}>
+      <div>
         <Link to="/history">
-          <button style={{ marginRight: "10px", padding: "8px 16px" }}>
-            Ride History
-          </button>
+          <button>Ride History</button>
         </Link>
         <Link to="/profile">
-          <button style={{ padding: "8px 16px" }}>Profile</button>
+          <button>Profile</button>
         </Link>
       </div>
     </div>

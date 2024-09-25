@@ -17,7 +17,7 @@ const RideHistory = () => {
   }, []);
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div>
       <h1>Ride History</h1>
       <ul>
         {history.map((ride) => (
@@ -28,14 +28,12 @@ const RideHistory = () => {
       </ul>
 
       {/* Navigation Buttons */}
-      <div style={{ marginTop: "20px" }}>
+      <div>
         <Link to="/">
-          <button style={{ marginRight: "10px", padding: "8px 16px" }}>
-            Book a Ride
-          </button>
+          <button>Book a Ride</button>
         </Link>
         <Link to="/profile">
-          <button style={{ padding: "8px 16px" }}>Profile</button>
+          <button>Profile</button>
         </Link>
       </div>
     </div>
